@@ -1,5 +1,10 @@
 plugins {
 	id 'java'
+	id 'application'
+}
+
+application {
+	mainClass = "com.example.demo.DemoApplication" // <5>
 }
 
 group = 'com.example'
@@ -10,8 +15,9 @@ repositories {
 }
 
 dependencies {
-	testImplementation(platform('org.junit:junit-bom:5.11.4'))
-	testImplementation('org.junit.jupiter:junit-jupiter')
+	testImplementation(libs.junit.jupiter) // <3>
+	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	implementation(libs.guava) // <4>
 }
 
 test {
