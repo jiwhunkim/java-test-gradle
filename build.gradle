@@ -4,16 +4,14 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	testImplementation(platform('org.junit:junit-bom:5.8.1'))
+	testImplementation(platform('org.junit:junit-bom:5.11.4'))
 	testImplementation('org.junit.jupiter:junit-jupiter')
-	testImplementation("org.assertj:assertj-core:3.21.0")
 }
 
 test {
